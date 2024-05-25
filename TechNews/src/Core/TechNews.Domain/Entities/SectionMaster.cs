@@ -1,0 +1,7 @@
+﻿using System;using System.Collections.Generic;using System.ComponentModel.DataAnnotations.Schema;using System.Linq;using System.Text;using System.Threading.Tasks;using System.Xml;using TechNews.Domain.Common;namespace TechNews.Domain.Entities{    public class SectionMaster : AuditableEntity    {        public int SectionMasterId { get; set; }        public string? Title { get; set; }        public string? Image { get; set; }        public string? ShortDescription { get; set; }        public int? TotalViews { get; set; }        public string? KeyWords { get; set; }        public string CategoryType { get; set; }        public string DynamicData { get; set; }        public ICollection<StoredFile>? StoredFiles { get; set; }        public ICollection<Comment>? Comments { get; set; }        public virtual Article Article { get; set; }        public virtual EventSchedule EventSchedule { get; set; }        public virtual LiveInterview LiveInterview { get; set; }        public virtual Magazine Magzine { get; set; }        public virtual Podcast Podcast { get; set; }
+
+        public virtual Youtube Youtube { get; set; }        public virtual CaseStudies CaseStudies { get; set; }
+
+        public virtual Webinar Webinar { get; set; }        public virtual DynamicFormData DynamicFormData { get; set; }
+
+    }}
